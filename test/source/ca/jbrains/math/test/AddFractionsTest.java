@@ -9,32 +9,27 @@ import static junit.framework.TestCase.assertEquals;
 public class AddFractionsTest {
     @Test
     public void zeroPlusZero() throws Exception {
-        Fraction sum = new Fraction(0).plus(new Fraction(0));
-        assertEquals(0, sum.intValue()); /*Sum of two fractions*/
+        assertEquals(0, new Fraction(0).plus(new Fraction(0)).intValue()); /*Sum of two fractions*/
     }
 
     @Test
     public void nonZeroPlusZero() throws Exception {
-        final Fraction sum = new Fraction(3).plus(new Fraction(0));
-        assertEquals(3, sum.intValue());
+        assertEquals(3, new Fraction(3).plus(new Fraction(0)).intValue());
     }
 
     @Test
     public void zeroPlusNonZero() throws Exception {
-        final Fraction sum = new Fraction(0).plus(new Fraction(5));
-        assertEquals(5, sum.intValue());
+        assertEquals(5, new Fraction(0).plus(new Fraction(5)).intValue());
     }
 
     @Test
     public void nonNegativeNonZeroOperands() throws Exception {
-        final Fraction sum = new Fraction(3).plus(new Fraction(4));
-        assertEquals(7, sum.intValue());
+        assertEquals(7, new Fraction(3).plus(new Fraction(4)).intValue());
     }
 
     @Test
     public void negativeInputsAndNegativeOutput() throws Exception {
-        final Fraction sum = new Fraction(-3).plus(new Fraction(1));
-        assertEquals(-2, sum.intValue());
+        assertEquals(-2, new Fraction(-3).plus(new Fraction(1)).intValue());
     }
 }
 
