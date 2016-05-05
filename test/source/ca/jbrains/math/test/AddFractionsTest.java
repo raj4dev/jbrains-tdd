@@ -31,6 +31,13 @@ public class AddFractionsTest {
     public void negativeInputsAndNegativeOutput() throws Exception {
         assertEquals(-2, new Fraction(-3).plus(new Fraction(1)).intValue());
     }
+
+    @Test
+    public void nonTrivialDenominator() throws Exception {
+        final Fraction sum = new Fraction(1,5).plus(new Fraction(2,5));
+        assertEquals(3, sum.getNumerator());
+        assertEquals(5, sum.getDenominator());
+    }
 }
 
 
