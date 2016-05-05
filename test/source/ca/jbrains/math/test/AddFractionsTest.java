@@ -1,7 +1,6 @@
 package ca.jbrains.math.test;
 
 import ca.jbrains.math.Fraction;
-import junit.framework.Assert;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
