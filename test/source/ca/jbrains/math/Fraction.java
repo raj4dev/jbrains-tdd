@@ -18,12 +18,12 @@ public class Fraction {
     }
 
     public Fraction plus(Fraction that){
-        return new Fraction(this.integerValue + that.integerValue, denominator); /*default denominator of 1 ensures that
+        return new Fraction(this.numerator + that.numerator, denominator); /*default denominator of 1 ensures that
          old tests will pass.*/
     }
 
     public int intValue() {
-        return integerValue;
+        return numerator;
     }
 
     public int getNumerator() {
