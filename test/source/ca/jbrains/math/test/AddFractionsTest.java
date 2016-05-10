@@ -8,23 +8,26 @@ import static junit.framework.TestCase.assertEquals;
 public class AddFractionsTest {
     @Test
     public void zeroPlusZero() throws Exception {
-        assertEquals(0, new Fraction(0).plus(new Fraction(0)).intValue()); /*Sum of two fractions*/
+        assertEquals(new Fraction(0), new Fraction(0).plus(new Fraction(0))); /*Sum of two
+        fractions*/
     }
 
     @Test
     public void nonZeroPlusZero() throws Exception {
-        assertEquals(3, new Fraction(3).plus(new Fraction(0)).intValue());
+        assertEquals(new Fraction(3), new Fraction(3).plus(new Fraction(0))); /*Sum of two
+        fractions*/
     }
 
     @Test
     public void zeroPlusNonZero() throws Exception {
-        assertEquals(5, new Fraction(0).plus(new Fraction(5)).intValue());
+        assertEquals(new Fraction(5), new Fraction(0).plus(new Fraction(5))); /*Sum of two
+        fractions*/
     }
 
     @Test
     public void nonNegativeNonZeroOperands() throws Exception {
-        assertEquals(7, new Fraction(3).plus(new Fraction(4)).intValue());
-    }
+        assertEquals(new Fraction(7), new Fraction(3).plus(new Fraction(4)));
+}
 
     @Test
     public void negativeInputsAndNegativeOutput() throws Exception {
@@ -33,8 +36,7 @@ public class AddFractionsTest {
 
     @Test
     public void nonTrivialButCommonDenominator() throws Exception {
-        final Fraction sum = new Fraction(1,5).plus(new Fraction(2,5));
-        assertEquals(new Fraction(3,5), sum);
+        assertEquals(new Fraction(3,5), new Fraction(1,5).plus(new Fraction(2,5)));
     }
 }
 
