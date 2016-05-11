@@ -2,6 +2,7 @@ package ca.jbrains.math.test;
 
 import org.junit.Test;
 
+import static ca.jbrains.math.NumberTheory.gcd;
 import static junit.framework.TestCase.assertEquals;
 
 public class GreatestCommonDivisorTest {
@@ -45,16 +46,5 @@ public class GreatestCommonDivisorTest {
         * be positive*/
         assertEquals(4,gcd(-24,28));
         assertEquals(4,gcd(24,-28));
-    }
-
-    /*No need for a separate class for the GCD method!*/
-    private int gcd(int a, int b) {
-        int t = 0;
-        while (b != 0) {
-            t = b;
-            b = a % b;
-            a = t;
-        }
-        return Math.abs(a);
     }
 }
