@@ -11,7 +11,7 @@ public class GreatestCommonDivisorTest {
         assertEquals(1, gcd(1, 1));
         //BAD Practice ! Having more than 1 test in a test case.
         assertEquals(1, gcd(1, 1));
-        assertEquals(-1, gcd(-1, -1));
+        assertEquals(1, gcd(-1, -1));
     }
 
     @Test
@@ -20,7 +20,7 @@ public class GreatestCommonDivisorTest {
         assertEquals(1, gcd(2, 3));
         //BAD Practice ! Having more than 1 test in a test case.
         assertEquals(1, gcd(4, 7));
-        assertEquals(-1, gcd(-2, -3));
+        assertEquals(1, gcd(-2, -3));
     }
 
     @Test
@@ -35,7 +35,7 @@ public class GreatestCommonDivisorTest {
         assertEquals(2, gcd(6,8));
         //BAD Practice ! Having more than 1 test in a test case.
         assertEquals(7,gcd(49,315));
-        assertEquals(-4,gcd(24,-28));
+        assertEquals(4,gcd(24,-28));
     }
 
     @Test
@@ -43,8 +43,8 @@ public class GreatestCommonDivisorTest {
         //BAD Practice ! Having more than 1 test in a test case.
         /* I am not sure that I like this behavior. Maybe GCD should always
         * be positive*/
-        assertEquals(-4,gcd(-24,-28));
         assertEquals(4,gcd(-24,28));
+        assertEquals(4,gcd(24,-28));
     }
 
     /*No need for a separate class for the GCD method!*/
@@ -55,6 +55,6 @@ public class GreatestCommonDivisorTest {
             b = a % b;
             a = t;
         }
-        return a;
+        return Math.abs(a);
     }
 }
