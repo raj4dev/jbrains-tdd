@@ -14,18 +14,13 @@ public class Fraction {
         final int gcd = NumberTheory.gcd(numerator, denominator) * signOfDenominator;
 
         this.numerator = numerator / gcd;
-        this.denominator = denominator /gcd;
+        this.denominator = denominator / gcd;
     }
 
     public Fraction plus(Fraction that) {
-        if (this.denominator != that.denominator) {
-            int sumNumerator = (this.numerator * that.denominator) + (that.numerator * this.denominator);
-            int sumDenominator = (this.denominator * that.denominator);
-            return (new Fraction(sumNumerator, sumDenominator));
-        } else {
-            return new Fraction(this.numerator + that.numerator, denominator); /*default denominator of 1 ensures that
-         old tests will pass.*/
-        }
+        int sumNumerator = (this.numerator * that.denominator) + (that.numerator * this.denominator);
+        int sumDenominator = (this.denominator * that.denominator);
+        return (new Fraction(sumNumerator, sumDenominator));
     }
 
     @Override
