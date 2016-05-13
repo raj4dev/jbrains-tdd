@@ -12,6 +12,7 @@ public class Fraction {
         final int signOfDenominator = denominator < 0 ? -1 : 1;
         //CONTRACT: GCD never returns zero.
         final int gcd = NumberTheory.gcd(numerator, denominator) * signOfDenominator;
+
         this.numerator = numerator / gcd;
         this.denominator = denominator /gcd;
     }
