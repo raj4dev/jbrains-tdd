@@ -32,6 +32,13 @@ public class FractionEqualsTest {
     public void wholeNumberNotEqualsToDifferentWholeNumber() throws Exception {
         assertNotEquals(new Fraction(6), new Fraction(5));
     }
+
+    @Test
+    public void negativeDenominator() throws Exception {
+        assertEquals(new Fraction(1,2), new Fraction(-1,-2));
+        //BAD Practice ! Having more than 1 test in a test case.
+        assertEquals(new Fraction(-1,2), new Fraction(1,-2));
+    }
 }
 
 /*
