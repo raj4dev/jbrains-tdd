@@ -1,5 +1,6 @@
 package ca.jbrains.math.test;
 
+import ca.jbrains.math.NumberTheory;
 import org.junit.Test;
 
 import static ca.jbrains.math.NumberTheory.gcd;
@@ -46,5 +47,13 @@ public class GreatestCommonDivisorTest {
         * be positive*/
         assertEquals(4,gcd(-24,28));
         assertEquals(4,gcd(24,-28));
+    }
+
+    @Test
+    public void zero() throws Exception {
+        assertEquals(1, NumberTheory.gcd(1,0));
+        //BAD Practice ! Having more than 1 test in a test case.
+        assertEquals(5, NumberTheory.gcd(0,5));
+        assertEquals(0, NumberTheory.gcd(0,0));
     }
 }
